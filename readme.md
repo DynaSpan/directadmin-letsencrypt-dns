@@ -21,7 +21,7 @@ Make sure you have the following things ready:
 ### Server
 On the server where you want to create the SSL certificates:
 
-1. place the `cleanup.sh` and `prehook.sh` files in a folder (preferably together with `cerbot-auto`). 
+1. Place the `cleanup.sh` and `prehook.sh` files in a folder (preferably together with `cerbot-auto`). 
 2. Edit them to make sure they point to the right location and include the right password. 
 3. Make them executable by doing `chmod +x {filename}.sh`. 
 
