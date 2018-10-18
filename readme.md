@@ -2,6 +2,8 @@
 
 This repository contains code snippets to automate your Lets Encrypt DNS validation when using DirectAdmin as DNS server. It works with `certbot-auto` and **supports currently only WILDCARD validations**.
 
+For my Medium post about this, [click here](https://medium.com/@m.drossaerts/automating-lets-encrypt-wildcard-validation-with-directadmin-api-27f081f75ed0)
+
 ## Prerequisites
 
 Make sure you have the following things ready:
@@ -17,7 +19,7 @@ You can run the PHP scripts on a seperate server:
 1. Copy the `letsencrypt-wildcard.php` and `httpsocket.php` file to someplace in your webroot on your HTTP server
 2. Edit the settings in the `letsencrypt-wildcard.php` file.
 3. **Make sure you change the `$requestValidationPassword` variable!**.
-4. Test if it works by going to `http(s)://yourdomain.com/path/to/letsencrypt-wildcard.php?pass={{MYPASS}}&certbot_domain=yourdomain.com&certbot_validation=test123`. In your DirectAdmin web UI, navigate to your domain, 'Your Account' => 'DNS management'. You should see the `_acme-challenge.yourdomain.com` record there as a TXT record with `test123` as value.
+4. Test if it works by going to `http(s)://yourdomain.com/path/to/letsencrypt-wildcard.php?pass={{MYPASS}}&certbot_domain=yourdomain.com&certbot_validation=test123` In your DirectAdmin web UI, navigate to your domain, 'Your Account' => 'DNS management'. You should see the `_acme-challenge.yourdomain.com` record there as a TXT record with `test123` as value.
 
 On the server where you want to create the SSL certificates:
 
